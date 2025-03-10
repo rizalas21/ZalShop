@@ -1,3 +1,6 @@
+"use client";
+
+import { redirect } from "next/navigation";
 import Footer from "../component/footer";
 
 export default function Beranda() {
@@ -16,7 +19,10 @@ export default function Beranda() {
         <p className="text-gray-300 mt-2 cursor-default">
           Cepat, Aman, dan Terpercaya
         </p>
-        <button className="mt-6 bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg text-lg transition duration-300 shadow-[0_0_20px_rgba(59,130,246,0.8)] cursor-default">
+        <button
+          className="mt-6 bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg text-lg transition duration-300 shadow-[0_0_20px_rgba(59,130,246,0.8)] cursor-pointer"
+          onClick={() => redirect("/produk")}
+        >
           Mulai Top-Up Sekarang
         </button>
       </header>
